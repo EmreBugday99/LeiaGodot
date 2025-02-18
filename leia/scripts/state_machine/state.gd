@@ -1,7 +1,7 @@
-class_name StateResource extends Resource
+class_name StateResource
+extends Resource
 
 @export var state_name: String
-@export var state_priority: int
 @export var next_states: Array[StateResource]
 # Determines whether it is possible to transition to THIS state
 @export var transition_expression: ExpressionResource
