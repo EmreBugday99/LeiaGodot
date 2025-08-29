@@ -1,0 +1,6 @@
+#ifndef LEIA_HELPER_MACROS_HPP
+#define LEIA_HELPER_MACROS_HPP
+
+#define LEIA_MAKE_RESOURCE_TYPE_HINT(m_type) vformat("%s/%s:%s", Variant::OBJECT, PROPERTY_HINT_RESOURCE_TYPE, m_type)
+
+#endif // LEIA_HELPER_MACROS_HPP
