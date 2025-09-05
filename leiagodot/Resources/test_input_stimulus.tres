@@ -1,0 +1,9 @@
+[gd_resource type="Stimulus" script_class="InputStimulus" load_steps=2 format=3 uid="uid://ldrc7r0ljw2h"]
+
+[ext_resource type="Script" uid="uid://cm1ib3mfpg3ao" path="res://scripts/ReflexSystem/input_stimulus.gd" id="1_kgplp"]
+
+[resource]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("1_kgplp")
+metadata/_custom_type_script = "uid://cm1ib3mfpg3ao"

@@ -6,6 +6,7 @@
 .import/
 export.cfg
 export_presets.cfg
+bin/
 
 # Imported translations (automatically generated from CSV files)
 *.translation
@@ -19,3 +20,13 @@ mono_crash.*.json
 .vscode/
 
 # Framework-specific ignores
+
+# Python Virtual Environment
+scons_env/
+
+# MacOS-spesific ignores
+*.os
+*.DS_Store
+
+# Scons-specific ignored
+*.dblite

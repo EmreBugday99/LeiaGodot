@@ -10,6 +10,9 @@
 #include "stat_system/stat.hpp"
 #include "stat_system/stat_container.hpp"
 #include "stat_system/stat_container_component.hpp"
+#include "reflex_system/reflex.hpp"
+#include "reflex_system/stimulus.hpp"
+#include "reflex_system/response.hpp"
 
 using namespace godot;
 
@@ -19,10 +22,15 @@ void initialize_leia_module(ModuleInitializationLevel p_level)
         return;
 
     GDREGISTER_CLASS(TagContainer);
+    
     GDREGISTER_CLASS(Stat);
     GDREGISTER_CLASS(StatContainer);
     GDREGISTER_CLASS(StatModifier);
     GDREGISTER_VIRTUAL_CLASS(StatContainerComponent);
+
+    GDREGISTER_CLASS(Reflex);
+    GDREGISTER_VIRTUAL_CLASS(Response);
+    GDREGISTER_VIRTUAL_CLASS(Stimulus);
 }
 
 void uninitialize_leia_module(ModuleInitializationLevel p_level)

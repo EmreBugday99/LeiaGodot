@@ -11,5 +11,6 @@ config_version=5
 [application]
 
 config/name="LeiaGodot"
+run/main_scene="uid://ctvu8dkpo0nwi"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
