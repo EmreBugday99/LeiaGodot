@@ -13,6 +13,7 @@
 #include "reflex_system/reflex.hpp"
 #include "reflex_system/stimulus.hpp"
 #include "reflex_system/response.hpp"
+#include "inventory_system/inventory_system.hpp"
 
 using namespace godot;
 
@@ -31,6 +32,10 @@ void initialize_leia_module(ModuleInitializationLevel p_level)
     GDREGISTER_CLASS(Reflex);
     GDREGISTER_VIRTUAL_CLASS(Response);
     GDREGISTER_VIRTUAL_CLASS(Stimulus);
+
+    GDREGISTER_CLASS(ItemResource);
+    GDREGISTER_CLASS(ItemObject);
+    GDREGISTER_VIRTUAL_CLASS(ItemExtension);
 }
 
 void uninitialize_leia_module(ModuleInitializationLevel p_level)

@@ -9,7 +9,10 @@ StatContainer::StatContainer()
     connect("ready", Callable(this, "on_ready"));
 }
 
-StatContainer::~StatContainer() {}
+StatContainer::~StatContainer()
+{
+    remove_all_stats();
+}
 
 void StatContainer::on_ready()
 {

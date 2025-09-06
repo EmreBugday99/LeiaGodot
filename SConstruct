@@ -18,6 +18,7 @@ sources = Glob("src/*.cpp")
 sources += Glob("src/stat_system/*.cpp")
 sources += Glob("src/tag_system/*.cpp")
 sources += Glob("src/reflex_system/*.cpp")
+sources += Glob("src/inventory_system/*.cpp")
 
 if env["platform"] == "macos":
     library = env.SharedLibrary(
