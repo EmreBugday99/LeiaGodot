@@ -20,6 +20,7 @@ mono_crash.*.json
 .vscode/
 
 # Framework-specific ignores
+game/
 
 # Python Virtual Environment
 scons_env/
