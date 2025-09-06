@@ -1,9 +1,0 @@
-[gd_resource type="Response" script_class="PrintResponse" load_steps=2 format=3 uid="uid://svva14y0rhqb"]
-
-[ext_resource type="Script" uid="uid://chjujes2ue4ok" path="res://scripts/ReflexSystem/print_response.gd" id="1_fe70e"]
-
-[resource]
-resource_local_to_scene = false
-resource_name = ""
-script = ExtResource("1_fe70e")
-metadata/_custom_type_script = "uid://chjujes2ue4ok"

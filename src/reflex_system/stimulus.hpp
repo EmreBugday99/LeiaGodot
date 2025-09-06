@@ -14,10 +14,11 @@ public:
     virtual ~Stimulus();
 
     virtual void initialize(Reflex* reflex);
-    // TODO: Deinitialize
+    virtual void deinitialize(Reflex* reflex);
     virtual bool can_stimulate(Reflex* reflex);
 
     GDVIRTUAL1_REQUIRED(initialize, Reflex*);
+    GDVIRTUAL1_REQUIRED(deinitialize, Reflex*);
     GDVIRTUAL1R_REQUIRED(bool, can_stimulate, Reflex*);
 
     static void _bind_methods();

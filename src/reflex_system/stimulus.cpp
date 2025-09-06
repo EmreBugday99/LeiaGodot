@@ -15,6 +15,12 @@ void Stimulus::initialize(Reflex* owner)
         GDVIRTUAL_CALL(initialize, owner);
 }
 
+void Stimulus::deinitialize(Reflex* reflex)
+{
+    if (GDVIRTUAL_IS_OVERRIDDEN(deinitialize))
+        GDVIRTUAL_CALL(deinitialize, reflex);
+}
+
 bool Stimulus::can_stimulate(Reflex* reflex)
 {
     if (GDVIRTUAL_IS_OVERRIDDEN(can_stimulate)) {
@@ -29,5 +35,6 @@ bool Stimulus::can_stimulate(Reflex* reflex)
 void Stimulus::_bind_methods()
 {
     GDVIRTUAL_BIND(initialize, "reflex");
+    GDVIRTUAL_BIND(deinitialize, "reflex");
     GDVIRTUAL_BIND(can_stimulate, "reflex");
 }

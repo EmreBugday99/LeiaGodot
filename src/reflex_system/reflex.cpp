@@ -2,6 +2,7 @@
 #include "stimulus.hpp"
 #include "response.hpp"
 #include "../helper_macros.hpp"
+#include <godot_cpp/classes/engine.hpp>
 
 Reflex::Reflex()
 {
@@ -10,12 +11,21 @@ Reflex::Reflex()
 
 Reflex::~Reflex()
 {
+    if (stimulus.is_null() == false && is_initialized)
+        stimulus->deinitialize(this);
 }
 
 void Reflex::_ready()
 {
-    if (!stimulus.is_null())
+    // Only initialize stimulus when actually running (not just in editor)
+    if (!stimulus.is_null()) {
+        // Skip initialization if we're in the editor but not running the scene
+        if (Engine::get_singleton()->is_editor_hint()) {
+            // In editor, don't initialize unless we're actually playing the scene
+            return;
+        }
         stimulus->initialize(this);
+    }
 
     is_initialized = true;
 }
@@ -40,8 +50,13 @@ void Reflex::set_stimulus(const Ref<Stimulus> new_stimulus)
     if (new_stimulus.is_null())
         return;
 
+    if (!stimulus.is_null() && is_initialized)
+        stimulus->deinitialize(this);
+
     stimulus = new_stimulus;
-    if (is_initialized)
+    
+    // Only initialize if we're ready and not just in the editor
+    if (is_initialized && !Engine::get_singleton()->is_editor_hint())
         stimulus->initialize(this);
 }
 
